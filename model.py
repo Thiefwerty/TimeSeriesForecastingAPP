@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
-
 from prophet import Prophet
 import streamlit as st
 from prophet.plot import plot_plotly
@@ -15,8 +12,6 @@ from keras.models import Sequential
 from keras.layers import Dense, LSTM, Dropout, GRU
 import tensorflow as tf 
 
-
-# In[7]:
 
 
 @st.cache
@@ -127,9 +122,7 @@ def start_prophet(data, period):
     st.write(prophet_show_forecast(val_df, 356, 1000), use_container_width=True)
 
 
-# In[8]:
-
-
+    
 class Model():
     
     def __init__(self, model_type, data, period):
@@ -142,11 +135,3 @@ class Model():
         
         if self.model_type == 'Prophet':
             start_prophet(self.data, self.period)
-        
-
-
-# In[ ]:
-
-
-
-
